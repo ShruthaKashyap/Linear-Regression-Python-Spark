@@ -1,6 +1,6 @@
 # Linear-Regression-Python-Spark
 
-Contents of the Zip file:
+Contents:
 
 
 1) linreg.py: Python-spark implementation of the Ordinary Least Square estimate of beta coefficients.
