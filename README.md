@@ -15,7 +15,7 @@ Contents:
 
 6) yxlin2_grad.out: Output file obtained on running gradient_desc.py for the input file yxlin2.csv
 
-7) README.txt: This document.
+7) yxlin and yxlin2 : Input files.
 
 
 Python version: 2.7.6
