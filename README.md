@@ -27,27 +27,11 @@ Spark version: 1.6.0
 Algorithm:
 
 
-1) linreg.py: Estimation of beta coefficients using Ordinary Least Square equation given as: Beta=((Xt.X)^-1)*(Xt.Y). Two mappers were used. One to obtain the matrix X.Xt for each line and
-              
-              another to obtain the matrix X.Y for each line in the csv. This was achieved through the functions generateA() and generateB(). Two reducers were used to obtain the summation of
-              
-              the values produced by the each of the mappers, and the outputs were read into the matrices A_sum and B_sum respectively. Finally, the value for beta was obtained by taking an 
-              
-              inverse of the A_sum matrix and multipying it with the B_sum atrix. The numpy library of python was extensively used to perform mathematical operations such as matrix multiplication,
-              
-              addition, transpose and inverse.
+1) linreg.py: Estimation of beta coefficients using Ordinary Least Square equation given as: Beta=((Xt.X)^-1)*(Xt.Y). Two mappers were used. One to obtain the matrix X.Xt for each line and another to obtain the matrix X.Y for each line in the csv. This was achieved through the functions generateA() and generateB(). Two reducers were used to obtain the summation of the values produced by the each of the mappers, and the outputs were read into the matrices A_sum and B_sum respectively. Finally, the value for beta was obtained by taking an inverse of the A_sum matrix and multipying it with the B_sum atrix. The numpy library of python was extensively used to perform mathematical operations such as matrix multiplication,addition, transpose and inverse.
 
 
 
-2) gradient_desc.py: An alternate, iterative method for implementing linear regresion using the euqation: Beta=Beta+Xt.alpha.(Y-XBeta). Two mapper funtions were used to collect the X and Y values separately
-                     
-                     and read them as matrices. Beta was intitialized to a matrix containing all 1s. For a fixed number of iterations, the value of beta was computed, and updated at each iteration from the 
-                     
-                     starting values of all 1s. The step size was denoted by alpha, and the values for alpha and number of iterations were read as command-line arguments. (For experiment, the value for
-		     
-                     alpha was assumed to be 0.001). At the end of each iteration, the values obtained for beta were compared with the previous values. If they became equal to each other, then the point
-                     
-                     of convergence has been reached, and the iteration is recorded. This corresponds to the beta coefficients obtained in the negative direction of the gradient.
+2) gradient_desc.py: An alternate, iterative method for implementing linear regresion using the euqation: Beta=Beta+Xt.alpha.(Y-XBeta). Two mapper funtions were used to collect the X and Y values separately and read them as matrices. Beta was intitialized to a matrix containing all 1s. For a fixed number of iterations, the value of beta was computed, and updated at each iteration from the starting values of all 1s. The step size was denoted by alpha, and the values for alpha and number of iterations were read as command-line arguments. (For experiment, the value for alpha was assumed to be 0.001). At the end of each iteration, the values obtained for beta were compared with the previous values. If they became equal to each other, then the point of convergence has been reached, and the iteration is recorded. This corresponds to the beta coefficients obtained in the negative direction of the gradient.
 
 
 
