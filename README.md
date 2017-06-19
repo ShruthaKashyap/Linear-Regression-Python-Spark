@@ -1,7 +1,8 @@
 # Linear-Regression-Python-Spark
 
-Contents:
+This project contains the Ordinary Least Squares and Grdient descent implementation of Linear Regression using Python-Spark.
 
+Contents:
 
 1) linreg.py: Python-spark implementation of the Ordinary Least Square estimate of beta coefficients.
 
